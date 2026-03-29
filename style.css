@@ -1,0 +1,433 @@
+.external {
+    padding-right: 15px !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%233366cc' d='M6 1h5v5L9.4 4.4 5.8 8 4 6.2l3.6-3.6L6 1zM2 2v8h8V7h1v4H1V1h4v1H2z'/%3E%3C/svg%3E") no-repeat center right !important;
+}
+
+/* Wikipedia Vector-like Core Styles */
+
+/* Base Typography */
+body {
+    font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
+    color: #202122;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* Sidebar Redesign */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    /* 增加寬度 */
+    padding: 0;
+    font-size: 1.05em;
+    /* 放大字級 */
+    background: transparent;
+    border: none;
+    z-index: 100;
+}
+
+.sidebar-section {
+    border: 1px solid #a2a9b1;
+    margin: 10px 15px;
+    /* 調整邊距 */
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header {
+    background: #c8e1ff;
+    /* 淡藍色 Header */
+    color: #202122;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5px;
+    /* 增加內距 */
+    border-bottom: 1px solid #a2a9b1;
+    font-size: 1.1em;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid #eaecf0;
+}
+
+.sidebar-menu li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 使用者要求：文字與圖示整體置中 */
+    padding: 10px 12px;
+    color: #0645ad;
+    text-decoration: none;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.sidebar-menu li a:hover {
+    background: #f8f9fa;
+    text-decoration: none;
+}
+
+.sidebar-menu li a i {
+    width: 24px;
+    /* 增加圖示固定寬度以利置中 */
+    text-align: center;
+    margin-right: 8px;
+    color: #72777d;
+    font-size: 1.1em;
+}
+
+/* Content Area */
+#content {
+    background-color: #f0f8ff;
+    /* 本地詞條淡淺藍色 */
+    border: 1px solid #a2a9b1;
+    padding: 1.5em;
+    margin-left: 205px;
+    /* 縮減間距 (Sidebar 200px + 5px 間隙) */
+    margin-top: 1em;
+    margin-right: 1.5em;
+    min-height: 85vh;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+    background: none;
+    font-weight: normal;
+    margin: 0;
+    padding-top: .5em;
+    padding-bottom: .17em;
+    border-bottom: 1px solid #a2a9b1;
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+/* 標題層級縮排：自標題二 (h2) 起，每級縮排0.5個字元 */
+.wiki-content h2 {
+    padding-left: 0.5em;
+}
+
+.wiki-content h3 {
+    padding-left: 1em;
+}
+
+.wiki-content h4 {
+    padding-left: 1.5em;
+}
+
+.wiki-content h5 {
+    padding-left: 2em;
+}
+
+.wiki-content h6 {
+    padding-left: 2.5em;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #0645ad;
+}
+
+a:visited {
+    color: #0b0080;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 全站外部連結強化 (Global External Links) */
+/* 排除 localhost 與 127.0.0.1 的本地連結 */
+a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"]):not([href*="0.0.0.0"]) {
+    border-bottom: 1px dotted #0645ad;
+    padding-right: 1.2em;
+    position: relative;
+    display: inline-block;
+}
+
+a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"]):not([href*="0.0.0.0"])::after {
+    content: "\f35d";
+    /* FontAwesome external link code */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 4px;
+    font-size: 0.8em;
+    color: #36c;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Forms and Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #36c;
+    color: #fff;
+    border: 1px solid #36c;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #447ff5;
+    border-color: #447ff5;
+    text-decoration: none;
+    color: #fff;
+}
+
+textarea {
+    width: 100%;
+    min-height: 550px;
+    /* 增加編輯區域高度 */
+    padding: 12px;
+    border: 1px solid #a2a9b1;
+    font-family: monospace;
+    /* 編輯器建議使用等寬字體 */
+    font-size: 1.1em;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    padding: 2px 5px !important;
+    line-height: 1.3 !important;
+}
+
+.wikitable {
+    background-color: #f8f9fa;
+    color: #202122;
+    margin: 1em 0;
+    border: 1px solid #a2a9b1;
+    border-collapse: collapse;
+}
+
+.wikitable th,
+.wikitable td {
+    border: 1px solid #a2a9b1;
+    padding: 0.4em 0.6em !important;
+}
+
+.wikitable th {
+    background-color: #eaecf0;
+    text-align: center;
+}
+
+/* Infobox */
+.infobox {
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    color: #202122;
+    margin: 0.5em 0 0.5em 1em;
+    float: right;
+    clear: right;
+    font-size: 88%;
+    width: 22em;
+}
+
+.infobox th,
+.infobox td {
+    border: 1px solid #a2a9b1;
+    padding: 0.2em 0.4em !important;
+}
+
+/* Thumbnails */
+.thumbinner {
+    border: 1px solid #c8ccd1;
+    padding: 3px;
+    background-color: #f8f9fa;
+    font-size: 94%;
+    text-align: center;
+}
+
+.footer {
+    padding: 2em;
+    font-size: 0.75em;
+    color: #54595d;
+    text-align: center;
+}
+
+/* Gallery Styles */
+ul.gallery {
+    margin: 2px;
+    padding: 2px;
+    display: block;
+    list-style: none;
+}
+
+li.gallerybox {
+    vertical-align: top;
+    display: inline-block;
+    margin: 2px;
+}
+
+li.gallerybox div.thumb {
+    text-align: center;
+    border: 1px solid #c8ccd1;
+    background-color: #f8f9fa;
+    margin: 2px;
+}
+
+li.gallerybox div.gallerytext {
+    overflow: hidden;
+    font-size: 94%;
+    padding: 2px 4px;
+    word-wrap: break-word;
+    text-align: left;
+    line-height: 1.3em;
+}
+
+/* References */
+.reference {
+    font-size: 80%;
+    line-height: 0;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+.reference a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+.reference a:hover {
+    text-decoration: underline;
+}
+
+/* Category Links Box */
+.catlinks {
+    margin-top: 2em;
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 8px 15px;
+    clear: both;
+    font-size: 0.9em;
+    border-radius: 2px;
+}
+
+.catlinks span {
+    color: #202122;
+}
+
+.no-print,
+.edit-link,
+.search-box,
+.top-nav,
+.vector-menu {
+    display: none !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #f6f6f6;
+    font-family: sans-serif;
+}
+
+.top-banner {
+    background: #36c;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-banner a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.top-banner a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid #a2a9b1;
+    padding: 40px;
+    min-height: 80vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#simple-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+#simple-lightbox img {
+    max-width: 95%;
+    max-height: 95%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.content img {
+    cursor: zoom-in;
+    transition: transform 0.2s;
+}
+
+.content img:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    color: #72777d;
+    padding: 20px;
+    font-size: 0.8em;
+}

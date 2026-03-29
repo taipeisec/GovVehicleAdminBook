@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>車輛剪報：○市政府勞工局技工開公務車犯案 - 機關公務車輛管理作業手冊 (電子書版)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-banner">
+        <div style="font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%;">
+            機關公務車輛管理作業手冊 (電子書版)
+        </div>
+        <div>
+            <a href="index.html">🏠 回首頁目錄</a>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <h1>車輛剪報：○市政府勞工局技工開公務車犯案</h1>
+        <hr>
+        <div class="content">
+            <p>【2004-09-20 中華日報 記者鄧岳江╱中和報導】</p>
+<p>在○市政府上班的高○○，為替外甥曾○○討債，竟駕駛公務車強押黃、陳二名情侶上車，不但脅迫二人簽下二十萬元本票，還向陳女母親恐嚇十萬元，陳母將高嫌等人誘至家中取款，中和警方趕往埋伏將高嫌三人逮捕，並依妨害自由及違反槍砲彈藥等罪嫌移送法辦。</p>
+<p>○市政府勞工局職訓中心技工高○○（41歲），十九日下午四時許駕著職訓中心公務車，與外甥曾○○（23歲）開車行經板橋民權路時，因發現積欠他八萬元的陳女（17歲）和她黃姓男友（27歲），決定紛持鋁棒及電擊棒強押二人上車。高嫌將二人強押上車後，一路直駛新莊新樹路另一名男子曹○○（20歲）家中，三人再以武士刀及空氣槍脅迫被害人簽下二十萬元本票，並要陳女向家人要錢抵債。</p>
+<p>陳母為救愛女，一方面虛與蛇委，表示備妥十萬，另向警方報案，高嫌等人晚間八時三十分，依約至中和安邦街陳母住處取款時，即被埋伏中和警方逮捕。</p>
+<p>高向警方表示，陳和男友今年六到七月間以做生意為由，陸續向他借款八萬逾期不還還四處躲債，案發當時，開車無意間遇到，才會逼他還錢。高並坦承，為逼他還錢，曾持空氣槍及武士刀施予恐嚇，由於陳女信用不佳，才會轉向陳母討債。</p>
+<p>陳女供稱積欠高的債款是曾嫌要他購買毒品所欠下。但曾嫌對陳女指控非常氣憤，陳女因沒錢花用基於朋友情誼才會向舅舅高健明借錢，沒想到卻遭反咬。</p>
+
+        </div>
+    </div>
+    
+    <footer>
+        © 2026 Copyright by Hungpro Chen | 匯出日期: 2026-03-30
+    </footer>
+
+    <div id="simple-lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-feat-img">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightbox = document.getElementById('simple-lightbox');
+            const lightboxImg = document.getElementById('lightbox-feat-img');
+            
+            document.querySelectorAll('.content img').forEach(img => {
+                // 移除外層連結 (避免閃爍) 並改為內部顯示
+                if (img.parentElement.tagName === 'A') {
+                    img.parentElement.onclick = function(e) {
+                        e.preventDefault();
+                        lightbox.style.display = 'flex';
+                        lightboxImg.src = img.src;
+                    };
+                } else {
+                    img.onclick = function() {
+                        lightbox.style.display = 'flex';
+                        lightboxImg.src = img.src;
+                    };
+                }
+            });
+        });
+    </script>
+</body>
+</html>
